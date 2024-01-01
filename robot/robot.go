@@ -10,6 +10,7 @@ type Operator struct {
 }
 
 func (o *Operator) PasteString(text string) error {
+	robotgo.Click()
 	if err := robotgo.KeyTap(robotgo.KeyA, robotgo.CmdCtrl()); err != nil {
 		return fmt.Errorf("key tap ctrl+a failed: %w", err)
 	}
